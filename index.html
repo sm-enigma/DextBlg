@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudBlog - Dexter NJIE's Personal Blog</title>
+
+<style>
+    .popup { 
+        display: none; 
+        position: fixed; 
+        left: 0; 
+        top: 0; 
+        width: 100%; 
+        height: 100%; 
+        background: rgba(0, 0, 0, 0.7); 
+        justify-content: center; 
+        align-items: flex-start; /* Align items to the top */
+        z-index: 1000; /* Ensure it appears above other content */
+        padding: 20px; /* Add padding around the pop-up */
+    }
+
+    .popup-content { 
+        background: white; 
+        padding: 20px; 
+        border-radius: 5px; 
+        width: 80%; /* Set width */
+        max-width: 600px; /* Maximum width */
+        max-height: 90vh; /* Limit max height to viewport height */
+        overflow-y: auto; /* Allow scrolling if content is too long */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .close { 
+        cursor: pointer; 
+        align-self: flex-end; /* Align close button to the right */
+        font-size: 20px; 
+    }
+</style>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.min.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body class="light-theme">
+
+  <!--
+    - #HEADER
+  -->
+
+  <header>
+
+    <div class="container">
+
+      <nav class="navbar">
+
+        <a href="#">
+          <img src="./assets/images/logo-light.png" alt="Devblog's logo" width="150" height="40" class="logo-light">
+          <img src="./assets/images/logo-dark.png" alt="Devblog's logo" width="150" height="40" class="logo-dark">
+        </a>
+
+        <div class="btn-group">
+
+          <button class="theme-btn theme-btn-mobile light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="flex-wrapper">
+
+          <ul class="desktop-nav">
+
+            <li>
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+
+            <li>
+              <a href="https://www.noblecloudsolutions.com/portfolio" class="nav-link">About Me</a>
+            </li>
+
+            <li>
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+
+          </ul>
+
+          <button class="theme-btn theme-btn-desktop light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+        </div>
+
+        <div class="mobile-nav">
+
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="wrapper">
+
+            <p class="h3 nav-title">Main Menu</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">About Me</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+
+          </div>
+
+          <div>
+
+            <p class="h3 nav-title">Topics</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Cloud</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">DevOps</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Social Media Services</a>
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+
+    <!--
+      - #HERO SECTION
+    -->
+
+    <div class="hero">
+
+      <div class="container">
+
+        <div class="left">
+
+          <h1 class="h1">
+            Hi, I'm <b>Dexter&nbsp;NJIE</b>.
+            <br>Cloud and DevOps engineer
+          </h1>
+
+          <p class="h3">
+            Specialized in <abbr title="Accessibility">Cloud, DevOps</abbr>
+            and Social Media Services
+          </p>
+
+          <div class="btn-group">
+            <a href="contact.html" class="btn btn-primary">Contact Me</a>
+            <a href="https://www.noblecloudsolutions.com/portfolio" class="btn btn-secondary">About Me</a>
+          </div>
+
+        </div>
+
+        <div class="right">
+
+          <div class="pattern-bg"></div>
+          <div class="img-box">
+            <img src="./assets/images/hero.png" alt="Dexter NJIE" class="hero-img">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="main">
+
+      <div class="container">
+
+        <!--
+          - BLOG SECTION
+        -->
+
+
+        
+
+
+
+        <div class="blog">
+
+          <h2 class="h2">Latest Blog Post</h2>
+
+          <div class="blog-card-group">
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-1.png" alt="Building microservices with Dropwizard, MongoDB & Docker"
+                  width="250" class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Database</button>
+
+                <h3>
+                  <a href="#" class="h3">
+                    Building microservices with Dropwizard, MongoDB & Docker
+                  </a>
+                </h3>
+
+                <p class="blog-text">
+                  This NoSQL database oriented to documents (by documents like JSON) combines some of the features from
+                  relational
+                  databases, easy to use and the multi-platform is the best option for scale up and have fault
+                  tolerance, load balancing,
+                  map reduce, etc.
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="./assets/images/author.png" alt="Julia Walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2022-01-17">Jan 17, 2022</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT3M">3 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-2.png" alt="Fast web page loading on a $20 feature phone" width="250"
+                  class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Web Performance</button>
+
+                <h3><a href="" class="h3">Fast web page loading on a $20 feature phone</a></h3>
+
+                <p class="blog-text">
+                  Feature phones are affordable (under $20-25), low-end devices enabling 100s of millions of users in
+                  developing countries
+                  to leverage the web. Think of them as a light version of a smart phone.
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="./assets/images/author.png" alt="Julia walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2021-12-10">Dec 10, 2021</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT2M">2 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-3.png" alt="Accessibility Tips for Web Developers" width="250"
+                  class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Accessibility</button>
+
+                <h3><a href="" class="h3">Accessibility Tips for Web Developers</a></h3>
+
+                <p class="blog-text">
+                  It's awesome to build sites that are inclusive and accessible to everyone. There are at least six key
+                  areas of
+                  disability we can optimize for: visual, hearing, mobility, cognition, speech and neural. Many tools
+                  and resources can
+                  help here, even if you're totally new to web accessibility.
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="./assets/images/author.png" alt="Julia walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2021-11-28">Nov 28, 2021</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT4M">4 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-4.png" alt="Dynamically Securing Databases using Hashicorp Vault"
+                  width="250" class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Database</button>
+
+                <h3><a href="" class="h3">Dynamically Securing Databases using Hashicorp Vault</a></h3>
+
+                <p class="blog-text">
+                  Nowadays, it's hard to profoundly talk about security in the IT industry, since it has to be
+                  considered on so many
+                  different levels: from securing code chunks, securing containers, up to securing complex
+                  infrastructures and defining
+                  strong authorization and authentication policies across the enterprise.
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="./assets/images/author.png" alt="Julia walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2021-11-20">Nov 20, 2021</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT4M">4 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-5.png"
+                  alt="Adaptive Loading - Improving Web Performance on low-end devices" width="250"
+                  class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Web Performance</button>
+
+                <h3><a href="" class="h3">Adaptive Loading - Improving Web Performance on low-end devices</a></h3>
+
+                <p class="blog-text">
+                  Adaptive Loading: Do not just respond based on screen size, adapt based on actual device hardware.
+                  Any user can have a slow experience. In a world with widely varying device capabilities, a "one-size"
+                  fits all
+                  experience may not always work. Sites that delight users on high-end devices can be unusable on
+                  low-end ones,
+                  particularly on median mobile and desktop hardware and in emerging markets.
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="./assets/images/author.png" alt="Julia walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2021-11-10">Nov 10, 2021</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT3M">3 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-6.png"
+                  alt="Don't Develop Just for Yourself - A Developer's Checklist to Accessibility" width="250"
+                  class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Accessibility</button>
+
+                <h3><a href="" class="h3">Don't Develop Just for Yourself - A Developer's Checklist to Accessibility</a>
+                </h3>
+
+                <p class="blog-text">
+                  We, as developers, tend to develop sites unconsciously for people like ourselves. If we don't actively
+                  pay attention,
+                  the sites are often accessible only for certain types of people: Sighted mouse-users, who have good
+                  fine motor skills
+                  and are good at using computers.
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="./assets/images/author.png" alt="Julia walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2021-10-25">Oct 25, 2021</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT7M">7 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-7.png"
+                  alt="Building a Restful CRUD API with Node JS, Express, and MongoDB" width="250"
+                  class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Database</button>
+
+                <h3><a href="" class="h3">Building a Restful CRUD API with Node JS, Express, and MongoDB</a></h3>
+
+                <p class="blog-text">
+                  Application Programming Interface is the abbreviation for API. An API is a software interface that
+                  enables two apps to
+                  communicate with one another. In other words, an API is a messenger that sends your request to the
+                  provider and then
+                  returns the response to you.
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="./assets/images/author.png" alt="Julia walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2021-10-15">Oct 15, 2021</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT5M">5 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-8.png" alt="Monitoring Performance with the PageSpeed Insights API"
+                  width="250" class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Web Performance</button>
+
+                <h3><a href="" class="h3">Monitoring Performance with the PageSpeed Insights API</a></h3>
+
+                <p class="blog-text">
+                  The PageSpeed Insights API provides free access to performance monitoring for web pages and returns
+                  data with
+                  suggestions for how to improve. The V5 API includes lab data from Lighthouse and real-world data from
+                  the Chrome User
+                  Experience Report (CrUX).
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="./assets/images/author.png" alt="Julia walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2021-10-03">Oct 3, 2021</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT5M">5 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-9.png" alt="The best web accessibility tools for developers in 2021"
+                  width="250" class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Accessibility</button>
+
+                <h3><a href="" class="h3">The best web accessibility tools for developers in 2021</a>
+                </h3>
+
+                <p class="blog-text">
+                  The quality of the tools you use defines the speed with which you can diagnose and resolve problems.
+                  Each year the landscape changes dramatically in web technologies, and of late the tooling for
+                  accessibility is no
+                  exception.
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="./assets/images/author.png" alt="Julia walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2021-09-13">Sep 13, 2021</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT7M">7 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div class="blog-card">
+
+              <div class="blog-card-banner">
+                <img src="./assets/images/blog-10.png"
+                  alt="How to connect a React frontend with a NodeJS/Express backend" width="250"
+                  class="blog-banner-img">
+              </div>
+
+              <div class="blog-content-wrapper">
+
+                <button class="blog-topic text-tiny">Database</button>
+
+                <h3><a href="" class="h3">How to connect a React frontend with a NodeJS/Express backend</a></h3>
+
+                <p class="blog-text">
+                  The MERN (MongoDB, Express, React, NodeJS) stack is very popular for making full stack applications,
+                  utilizing
+                  Javascript for both the backend and frontend as well as a document-oriented or non relational database
+                  (MongoDB),
+                  meaning that it's structured like JSON rather than a large excel sheet like SQL databases are.
+                </p>
+
+                <div class="wrapper-flex">
+
+                  <div class="profile-wrapper">
+                    <img src="./assets/images/author.png" alt="Julia walker" width="50">
+                  </div>
+
+                  <div class="wrapper">
+                    <a href="#" class="h4">Julia Walker</a>
+
+                    <p class="text-sm">
+                      <time datetime="2021-09-21">Sep 21, 2021</time>
+                      <span class="separator"></span>
+                      <ion-icon name="time-outline"></ion-icon>
+                      <time datetime="PT4M">4 min</time>
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <button class="btn load-more">Load More</button>
+
+        </div>
+
+
+
+
+
+      <!--
+        - ASIDE
+      -->
+
+      <div class="aside">
+
+        <div class="topics">
+
+          <h2 class="h2">Topics</h2>
+
+          <a href="#" class="topic-btn">
+            <div class="icon-box">
+              <ion-icon name="cloud-outline"></ion-icon>
+            </div>
+
+            <p>Cloud Computing</p>
+          </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="logo-google"></ion-icon>
+              </div>
+
+              <p>GCP</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="logo-amazon"></ion-icon>
+              </div>
+
+              <p>AWS</p>
+            </a>
+              <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="cog-outline"></ion-icon>
+              </div>
+
+              <p>DevOps</p>
+            </a>
+
+       
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="analytics-outline"></ion-icon>
+              </div>
+
+              <p>SEO</p>
+            </a>
+              <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="megaphone-outline"></ion-icon>
+              </div>
+
+              <p>Social Media Marketing</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="people-outline"></ion-icon>
+              </div>
+
+              <p>Social Media Management</p>
+            </a>
+
+
+          </div>
+
+          <div class="tags">
+
+            <h2 class="h2">Tags</h2>
+
+            <div class="wrapper">
+
+              <button class="hashtag">#Cloud Computing</button>
+              <button class="hashtag">#Google CloudP lartform</button>
+              <button class="hashtag">#Amazon Web Services</button>
+              <button class="hashtag">#GCP</button>
+              <button class="hashtag">#AWS</button>
+              <button class="hashtag">#DevOps</button>
+              <button class="hashtag">#CI/CD</button>
+              <button class="hashtag">#Serverless Computing</button>
+              <button class="hashtag">#Infrastructure As Code</button>
+              <button class="hashtag">#Docker</button>
+              <button class="hashtag">#Kubernetes</button>
+              <button class="hashtag">#SEO</button>
+              <button class="hashtag">#Cloud Security</button>
+              <button class="hashtag">#Social Media Management</button>
+              <button class="hashtag">#Social Media Marketing</button>
+              <button class="hashtag">#Cloud Cost Optimization</button>
+              <button class="hashtag">#Cloud Migration</button>
+
+            </div>
+
+          </div>
+
+          <div class="contact">
+
+            <h2 class="h2">Let's Talk</h2>
+
+            <div class="wrapper">
+
+              <p>
+                Do you want to learn more about how I can help your company overcome problems? Let us have a
+                conversation.
+              </p>
+
+              <ul class="social-link">
+
+                <li>
+                  <a href="https://www.linked.com/dexternjr" class="icon-box linkedin">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.x.com/dexternjr" class="icon-box twitter">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://www.facebook.com/dexternjr" class="icon-box facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+                
+                 <li></li>
+                  <a href="https://www.instagram.com/dexternjr" class="icon-box instagram">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div class="newsletter"></div>
+    <h2 class="h2">Newsletter</h2>
+    <div class="wrapper">
+        <p>
+            Subscribe to our newsletter to be among the first to keep up with the latest updates.
+        </p>
+        <form action="#" method="POST" id="newsletter-form">
+            <label for="email">Email Address:</label>
+            <input type="email" name="email" id="email" placeholder="Email Address" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+        <p class="success-message" style="display:none; color: green;">Thank you for subscribing!</p>
+        <p class="error-message" style="display:none; color: red;">Please enter a valid email address.</p>
+    </div>
+</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+
+
+  <!--
+    - #FOOTER
+  -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="wrapper">
+
+        <a href="#" class="footer-logo">
+          <img src="./assets/images/logo-light.png" alt="DevBlog's Logo" width="150" height="40" class="logo-light">
+          <img src="./assets/images/logo-dark.png" alt="DevBlog's Logo" width="150" height="40" class="logo-dark">
+        </a>
+
+        <p class="footer-text">
+          Learn about Cloud Computing, DevOps, Social Media Marketing and Social Media management.
+        </p>
+
+      </div>
+
+      <div class="wrapper">
+
+        <p class="footer-title">Quick Links</p>
+
+        <ul>
+
+        
+
+          <li>
+            <a href="noblecloudsolutions.com/porfolio" class="footer-link">About Me</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact Me</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    <div class="wrapper">
+    <p class="footer-title">Legal Stuff</p>
+    <ul>
+        <li>
+            <button onclick="openPopup('privacyNotice')" class="footer-link">Privacy Notice</button>
+        </li>
+        <li>
+            <button onclick="openPopup('cookiePolicy')" class="footer-link">Cookie Policy</button>
+        </li>
+        <li>
+            <button onclick="openPopup('termsOfUse')" class="footer-link">Terms Of Use</button>
+        </li>
+    </ul>
+</div>
+
+
+    </div>
+
+    <p class="copyright">
+      &copy; Copyright 2024 <a href="#">Dexter NJIE</a>
+    </p>
+
+  </footer>
+
+
+    <div id="privacyNotice" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('privacyNotice')">&times;</span>
+            <h2>Privacy Notice</h2>
+            <p><strong>Effective Date:</strong> 20, September 2024</p>
+            <p>Welcome to My Blog. Your privacy is important to us. This Privacy Notice explains how we collect, use, disclose, and safeguard your information when you visit our website [website URL].</p>
+            <p><strong>Information We Collect:</strong></p>
+            <ul>
+                <li>Name</li>
+                <li>Email address</li>
+                <li>IP address</li>
+                <li>Browser and device information</li>
+                <li>Usage data, including which pages you visit and how long you spend on them</li>
+            </ul>
+            <p>We may collect this information when you subscribe to our newsletter, comment on blog posts, or use contact forms.</p>
+            <p><strong>How We Use Your Information:</strong> We use your information to provide, operate, and maintain our website, respond to inquiries, and send you updates or newsletters (with your consent).</p>
+            <p><strong>Cookies:</strong> We use cookies and similar tracking technologies to monitor website usage. Please refer to our Cookie Policy for more information.</p>
+            <p><strong>Third-Party Services:</strong> We may use third-party services like Google Analytics to monitor and analyze web traffic.</p>
+            <p><strong>Sharing of Personal Data:</strong> We do not sell or share your personal data for marketing purposes.</p>
+            <p><strong>Your Rights:</strong> Depending on your location, you may have the right to access, correct, or delete your personal data.</p>
+            <p><strong>Data Security:</strong> We take reasonable steps to protect your information, but no data transmission over the internet is completely secure.</p>
+            <p><strong>Changes to This Privacy Notice:</strong> We may update this notice from time to time.</p>
+            <p><strong>Contact Us:</strong> If you have any questions, please contact us at dexternjr@noblecloudcomputing.com.</p>
+        </div>
+    </div>
+
+    <div id="cookiePolicy" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('cookiePolicy')">&times;</span>
+            <h2>Cookie Policy</h2>
+            <p><strong>Effective Date:</strong> 20, September 2024</p>
+            <p>Cookies are small text files placed on your device when you visit our website. They help us understand user interactions and provide a more personalized experience.</p>
+            <p><strong>Types of Cookies We Use:</strong></p>
+            <ul>
+                <li><strong>Essential Cookies:</strong> Necessary for website functionality.</li>
+                <li><strong>Analytics Cookies:</strong> Analyze web traffic and usage patterns.</li>
+                <li><strong>Functional Cookies:</strong> Enhance functionality like remembering preferences.</li>
+                <li><strong>Advertising Cookies:</strong> Deliver relevant ads and track performance.</li>
+            </ul>
+            <p>You can control cookies through your browser settings. By using our website, you consent to the use of cookies.</p>
+            <p><strong>Updates to This Cookie Policy:</strong> We may update this policy from time to time.</p>
+            <p><strong>Contact Us:</strong> If you have any questions, please contact us at dexternjr@noblecloudsolutions.com.</p>
+        </div>
+    </div>
+
+    <div id="termsOfUse" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('termsOfUse')">&times;</span>
+            <h2>Terms of Use</h2>
+            <p><strong>Effective Date:</strong> 20, September</p>
+            <p>By accessing and using my blog at noblecloudsolutions.com/blog, you agree to comply with these Terms of Use.</p>
+            <p><strong>Intellectual Property:</strong> All content on this website is the property of Dexter NJIE.</p>
+            <p><strong>User Contributions:</strong> By submitting content, you grant us a non-exclusive license to use it.</p>
+            <p><strong>Prohibited Uses:</strong> You agree not to use the site for illegal purposes or submit false information.</p>
+            <p><strong>Links to Third-Party Websites:</strong> We are not responsible for content on third-party sites.</p>
+            <p><strong>Disclaimer of Warranties:</strong> Our website is provided "as is" and we make no warranties regarding its content.</p>
+            <p><strong>Limitation of Liability:</strong> We are not liable for any damages resulting from the use of our website.</p>
+            <p><strong>Modifications to the Terms:</strong> We may revise these terms from time to time.</p>
+            <p><strong>Governing Law:</strong> These Terms are governed by the laws of Cameroon and your global IT village</p>
+            <p><strong>Contact Us:</strong> If you have any questions, please contact us at dexternjr@noblecloudsolutions.com.</p>
+        </div>
+    </div>
+
+    <script>
+        function openPopup(popupId) {
+            document.getElementById(popupId).style.display = 'flex';
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = 'none';
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+
+  <script>
+    document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const emailInput = document.getElementById('email');
+        const successMessage = document.querySelector('.success-message');
+        const errorMessage = document.querySelector('.error-message');
+
+        // Simple email validation
+        const email = emailInput.value;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (emailPattern.test(email)) {
+            // Simulate a successful subscription
+            successMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+            emailInput.value = ''; // Clear the input
+        } else {
+            // Show error message
+            errorMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+        }
+    });
+</script>
+  <script src="./assets/js/script.min.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
